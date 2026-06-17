@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Profile</title>
+</head>
+<body>
+
+    <h1><%= instaData.name %></h1>
+
+    <p>Followers: <%= instaData.followers %></p>
+
+    <p>Following: <%= instaData.following %></p>
+
+    <hr>
+
+    <% for(let post of instaData.posts) { %>
+
+        <img src="<%= post.image %>" width="250">
+
+        <p>Likes: <%= post.likes %></p>
+
+        <p>Comments: <%= post.comments %></p>
+
+        <hr>
+
+    <% } %>
+
+</body>
+</html>
