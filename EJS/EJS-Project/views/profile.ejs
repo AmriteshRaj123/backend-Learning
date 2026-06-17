@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- Include Navbar -->
+    <%- include("includes/navbar") %>
+
+    <div class="profile">
+
+        <!-- Variable Output -->
+        <h1><%= profile.name %></h1>
+
+        <p>Followers : <%= profile.followers %></p>
+
+        <p>Following : <%= profile.following %></p>
+
+
+
+        <!-- Condition Statement -->
+        <% if(profile.verified){ %>
+
+            <h3>✅ Verified Account</h3>
+
+        <% } else { %>
+
+            <h3>❌ Not Verified</h3>
+
+        <% } %>
+
+    </div>
+
+
+    <h2>Posts</h2>
+
+    <!-- Loop -->
+    <% for(let post of profile.posts){ %>
+
+        <div class="post">
+
+            <img src="<%= post.image %>">
+
+            <p>Likes : <%= post.likes %></p>
+
+        </div>
+
+    <% } %>
+
+
+    <!-- Include Footer -->
+    <%- include("includes/footer") %>
+
+</body>
+
+</html>

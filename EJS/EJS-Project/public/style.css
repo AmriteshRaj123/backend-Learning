@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.profile {
+    border: 1px solid gray;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.post {
+    margin-top: 20px;
+}
