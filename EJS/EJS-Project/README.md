@@ -566,16 +566,138 @@ Is project me humne seekha:
 
 ---
 
-# Interview Revision Questions
+#  Revision Questions
 
-1. EJS kya hai?
-2. Template Engine kya hota hai?
-3. res.send aur res.render me difference?
-4. req.params kya hai?
-5. req.query kya hai?
-6. Static files kaise serve karte hain?
-7. Include ka use kya hai?
-8. EJS me loop kaise likhte hain?
-9. EJS me condition kaise likhte hain?
-10. Dynamic route kya hota hai?
+1. What is EJS?
+
+EJS (Embedded JavaScript) is a template engine for Node.js that allows us to create dynamic HTML pages by embedding JavaScript code inside HTML.
+
+Example:
+
+<h1>Welcome <%= username %></h1>
+2. What is a Template Engine?
+
+A Template Engine is a tool that generates dynamic HTML by combining templates with data.
+
+Popular template engines:
+
+EJS
+Pug
+Handlebars
+3. Difference between res.send() and res.render()
+res.send()	res.render()
+Sends plain text, HTML, JSON, etc.	Renders a template file (EJS, Pug, etc.)
+No template engine required	Requires a template engine
+Direct response to client	Generates dynamic HTML before sending
+
+Example:
+
+res.send("Hello World");
+res.render("home", { name: "Amritesh" });
+4. What is req.params?
+
+req.params is used to access values from dynamic route parameters.
+
+Example:
+
+app.get("/user/:id", (req, res) => {
+    console.log(req.params.id);
+});
+
+URL:
+
+/user/101
+
+Output:
+
+101
+5. What is req.query?
+
+req.query is used to access values from the query string in the URL.
+
+Example:
+
+app.get("/search", (req, res) => {
+    console.log(req.query.q);
+});
+
+URL:
+
+/search?q=nodejs
+
+Output:
+
+nodejs
+6. How do we serve static files?
+
+We use Express middleware:
+
+app.use(express.static("public"));
+
+Folder structure:
+
+public/
+ ├── style.css
+ ├── script.js
+ └── image.png
+
+Now these files can be accessed directly by the browser.
+
+7. What is the use of Include in EJS?
+
+include is used to reuse common components such as headers, footers, and navigation bars.
+
+Example:
+
+<%- include("partials/header") %>
+
+Benefits:
+
+Code reusability
+Easier maintenance
+Cleaner templates
+8. How do you write a loop in EJS?
+
+Example:
+
+<ul>
+    <% fruits.forEach(fruit => { %>
+        <li><%= fruit %></li>
+    <% }) %>
+</ul>
+
+Output:
+
+<ul>
+    <li>Apple</li>
+    <li>Mango</li>
+    <li>Banana</li>
+</ul>
+9. How do you write conditions in EJS?
+
+Example:
+
+<% if(age >= 18) { %>
+    <h2>Adult</h2>
+<% } else { %>
+    <h2>Minor</h2>
+<% } %>
+10. What is a Dynamic Route?
+
+A Dynamic Route is a route that accepts variable values through URL parameters.
+
+Example:
+
+app.get("/user/:username", (req, res) => {
+    res.send(req.params.username);
+});
+
+URL:
+
+/user/amritesh
+
+Output:
+
+amritesh
+
 
