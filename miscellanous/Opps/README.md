@@ -1,0 +1,56 @@
+                                     **JS(OOP)SummaryShee**
+
+
+Qs1. WhatisObjectOrientedProgramming(OOP)?      
+
+Ans.
+Object-OrientedProgramming(OOP)isaprogrammingparadigmincomputersciencethatreliesontheconceptofclassesandobjects.Itisusedtostructureasoftwareprogramintosimple,reusablepiecesofcodeblueprints(usuallycalledclasses),whichareusedtocreateindividualinstancesofobjects.
+
+Qs2.WhataresomebenefitsofusingOOPinJavaScript?
+Ans.
+SomebenefitsofusingOOPinJavaScriptincludes:
+a.Improvedcodeorganization(structureofcode)
+b.Reusabilityofcode
+c.Bettermaintainabilityofcode
+d.Closenesstoreal-worldobjects
+
+
+Qs3. WhatisthedifferencebetweenanobjectandaclassinJavaScript?
+Ans.
+ObjectsinJSisastandaloneentity,withproperties,methodsandatype.Itcanbecreateddirectlyfromfunctionsorthroughconstructorfunctions.ClassinJSactsasablueprintforcreatingobjects.
+
+
+Qs4.WhatisaconstructorfunctioninJS?
+Ans.
+constructorfunctionisaspecialfunctionthatisusedtocreate&initializeobjectsinJS.Whenanewobjectiscreatedusingaconstructorfunction,itisautomaticallyassignedasetofpropertiesandmethodsthataredefinedwithinthefunction.
+
+
+Qs5.WhatisaprototypechaininJavaScript?
+Ans.
+EveryobjectinJavaScripthasabuilt-inproperty,whichiscalleditsprototype.Theprototypeisitselfanobject,sotheprototypewillhaveitsownprototype,making what'scalledaprototypechain.Thechainendswhenwereachaprototypethathasnullforitsownprototype.
+
+
+
+Qs6.WhatisthedifferencebetweenaconstructorandaclassinJavaScript?
+Ans.
+Aconstructorisafunctionthatcreatesanobject,whileaclassisablueprintforcreatingobjects.Classesdefinetheframeworkwhereas,constructoractuallycreatestheobjects&initializesthem.(InJavaScript,classesaresyntacticsugaroverconstructorfunctions.)
+
+
+Qs7.Whyisthe“new”keywordusedinJavaScript?
+Ans.
+The'new'keywordisusedtocreateaninstanceofanobject.Whenusedwithaconstructorfunction,itcreatesanewobjectandsetstheconstructorfunction's'this'keywordtopointtothenewobject.
+
+
+Qs8.WhatisInheritanceinOOP?
+Ans.InheritanceinOOPisdefinedastheabilityofaclasstoderivepropertiesandcharacteristicsfromanotherclasswhilehavingitsownpropertiesaswell .
+
+
+Qs9.Whatisthe“super”keywordinJS?
+Ans.
+ThesuperkeywordinJavaScriptactsasareferencevariabletotheparentclass.Itismainlyusedwhenwewanttoaccessavariable,method,orconstructorinthebaseclassfromthederivedclass.
+
+
+
+Qs10.Whatwillbetheoutputforthefollowingcode:
+
+Ans.Theoutputwillbe“Squareareais16”asthechildclass(Square)implementationofarea()functionwilloverrideparentclass(Box)implementationofthefunctionwiththesamename. 
