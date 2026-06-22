@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Post</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <h2>Create a New Quora Post</h2>
+    
     <form method="POST" action="/posts">
-        <input placeholder="enter username" name="username"/>
+        <input type="text" placeholder="enter username" name="username" required />
         <br><br>
 
-        <textarea placeholder="Write here your post" name="content"></textarea>
+        <textarea placeholder="Write here your post" name="content" rows="5" cols="30" required></textarea>
         <br><br>
 
         <button type="submit">Add Post</button>
     </form>
+
+    <br>
+    <a href="/posts">Back to All Posts</a>
 </body>
 </html>

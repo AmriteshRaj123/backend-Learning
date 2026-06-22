@@ -7,37 +7,26 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+   <h2>Quora Posts</h2>
 
-    <h3>Quora Posts</h3>
-
-    <% for (let post of posts) { %>
+   <div class="posts-container">
+       <% for(post of posts) { %>
         <div class="post">
-            <h3 class="username">@<%= post.username %></h3>
-            <p class="content"><%= post.content %></p>
-
-            <br>
-             <a href="http://localhost:3000/posts/<%= post.id %>">
-              See in details
-             </a>
-             <br>
-             <br>
-             <a href="http://localhost:3000/posts/<%= post.id%> /edit">
-              Edit Post
-             </a>
-
-
-
-                <br>
-                <br>
-             <a class="details-btn" href="/posts/<%= post.id %>">
-              Show More
-              </a>
-
-
+            <h3 class="username">@<%= post.username %></h3> 
+            <h4 class="content"><%= post.content %></h4>
+            <br/>
+            <a href="/posts/<%= post.id %>">See in Details</a> | 
+            <a href="/posts/<%= post.id %>/edit">Edit</a>
+            
+            <br><br>
+            <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
+                <button type="submit" style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Delete Post</button>
+            </form>
         </div>
-    <% } %>
+       <% } %>
+   </div>
 
-    <a href="http://localhost:3000/posts/news">Create New </a>
-
+   <br/>
+   <a href="/posts/news">Create New Post</a>
 </body>
 </html>

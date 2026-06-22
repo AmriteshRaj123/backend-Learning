@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post in Details</title>
-
     <link rel="stylesheet" href="/styles.css">
-
 </head>
 <body>
     <h2>Here is Your Post</h2>
-    <p>Post id : <%= post.id %></p>
 
-   <div class="post">
-    <h3 class="username">@<%= post.username %></h3>
-    <h4 class="content"><%= post.content %></h4>
-</div>
+    <div class="post">
+        <p style="font-size: 0.8rem; color: gray;"><strong>Post ID:</strong> <%= post.id %></p>
+        <br>
+        <h3 class="username">@<%= post.username %></h3>
+        <h4 class="content"><%= post.content %></h4>
+    </div>
+    
     <br><br>
-
-<a href="/posts">Show All Posts</a>
-
+    <a href="/posts">Show All Posts</a>
 </body>
 </html>

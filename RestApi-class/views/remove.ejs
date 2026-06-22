@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Post Confirmation</title>
+</head>
+<body>
+    <h2>Are you sure you want to delete this post?</h2>
+    <p><strong>Username:</strong> @<%= post.username %></p>
+    <p><strong>Content:</strong> <%= post.content %></p>
+
+    <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
+        <button type="submit" style="background-color: red; color: white;">Yes, Delete It!</button>
+    </form>
+
+    <br>
+    <a href="/posts">Cancel and Go Back</a>
+</body>
+</html>
