@@ -14,6 +14,26 @@
         <div class="post">
             <h3 class="username">@<%= post.username %></h3>
             <p class="content"><%= post.content %></p>
+
+            <br>
+             <a href="http://localhost:3000/posts/<%= post.id %>">
+              See in details
+             </a>
+             <br>
+             <br>
+             <a href="http://localhost:3000/posts/<%= post.id%> /edit">
+              Edit Post
+             </a>
+
+
+
+                <br>
+                <br>
+             <a class="details-btn" href="/posts/<%= post.id %>">
+              Show More
+              </a>
+
+
         </div>
     <% } %>
 
